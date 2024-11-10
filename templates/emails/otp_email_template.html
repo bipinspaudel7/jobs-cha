@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>XTen IT OTP Notification</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 100%; /* Allow full width on small screens */
+            margin: 0 auto;
+            padding: 20px; 
+            background: #fff4e1; /* Light orange background */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .header, .footer {
+            text-align: center;
+            color: #333; /* Dark color for headers and footers */
+        }
+        .otp {
+            font-size: 32px; 
+            font-weight: 600;
+            color: #ff7f50; /* Primary orange color */
+            letter-spacing: 10px; 
+            margin: 20px 0; /* Reduced margin */
+        }
+        .otp-box {
+            display: inline-block;
+            padding: 15px;
+            border: 2px solid #ff7f50; /* Border color */
+            border-radius: 10px;
+            background: #fff; /* Background color */
+            font-size: 32px; 
+            font-weight: 600;
+            color: #ff7f50;
+            letter-spacing: 10px;
+        }
+        .primary {
+            color: #ff7f50; /* Primary orange */
+        }
+        .footer p {
+            margin: 0;
+            margin-top: 8px;
+            color: #333; /* Dark color for footer text */
+            font-size: 12px; /* Reduced font size for footer */
+        }
+        .social-icons {
+            margin-top: 16px;
+        }
+        .social-icons a {
+            color: #ff7f50;
+            margin: 0 6px; 
+            font-size: 20px; /* Adjusted icon size */
+            text-decoration: none;
+        }
+        @media (max-width: 480px) {
+            .otp {
+                font-size: 28px; /* Further reduce OTP font size on very small screens */
+            }
+            h1 {
+                font-size: 20px; /* Adjust header size for small screens */
+            }
+            p {
+                font-size: 12px; /* Adjust paragraph size for small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;">
+                            <img alt="XTenIt Logo" src="https://xten.com.np/wp-content/uploads/2024/06/XTen_Logo-1.png" style="max-width: 100%; height: auto;" />
+                        </td>
+                        <td style="text-align: right;">
+                            <span style="font-size: 14px; line-height: 30px; color: #ff7f50;">{{ current_date }}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+
+        <main>
+            <div style="margin: 0; margin-top: 20px; padding: 20px; background: #ffffff; border-radius: 15px; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+                <h1 style="margin: 0; font-size: 22px; font-weight: 500; color: #333;">Your OTP</h1>
+                <p style="margin: 0; margin-top: 10px; font-size: 14px; font-weight: 700; color: #333;">Hey {{ username }} </p>
+                <p style="margin: 0; margin-top: 10px; font-weight: 500; letter-spacing: 0.5px;">
+                    Thank you for choosing XTenIt. Use the following OTP to complete your process. This OTP is valid for 
+                    <span style="font-weight: 600; color: #ff7f50;">5 minutes</span>. Please do not share this code with anyone.
+                </p>
+                <br>
+                <br>
+                <div class="otp-box">{{ otp }}</div>
+            </div>
+            <p style="max-width: 400px; margin: 0 auto; margin-top: 20px; text-align: center; font-weight: 500; color: #8c8c8c;">
+                Need help? Ask at 
+                <a href="https://xten.com.np/" style="color: #ff7f50; text-decoration: none;">xten.com.np</a> 
+                or visit our 
+                <a href="#" target="_blank" style="color: #ff7f50; text-decoration: none;">Help Center</a>
+            </p>
+        </main>
+
+        <footer class="footer">
+            <p style="margin: 0; margin-top: 20px; font-size: 14px; font-weight: 600;">XTen It 2024</p>
+            <p style="margin: 0; margin-top: 8px;">
+                Address: <a href="https://maps.google.com/?q=Pokhara+08,+Pokhara+33700" style="color: #ff7f50; text-decoration: none;">Pokhara 08 Kaski</a>
+            </p>
+            <p style="margin: 0; margin-top: 8px;">
+                Contact: <a href="tel:+9779816164252" style="color: #ff7f50; text-decoration: none;">+9779816164252</a>
+            </p>
+            {% comment %} <div class="social-icons">
+                <a href="#" target="_blank" title="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="#" target="_blank" title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" target="_blank" title="Twitter">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="#" target="_blank" title="Youtube">
+                    <i class="bi bi-youtube"></i>
+                </a>
+            </div> {% endcomment %}
+            <br>
+            <p style="margin: 0; margin-top: 16px;">Copyright © 2024 XTen IT. All rights reserved.</p>
+            <br>
+            <br>
+        </footer>
+    </div>
+</body>
+</html>

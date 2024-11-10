@@ -1,0 +1,19 @@
+Subject: Your OTP from XTenIt
+
+Dear {{ username }},
+
+Thank you for choosing XTenIt. Use the following OTP to complete your process. This OTP is valid for 5 minutes. Please do not share this code with anyone.
+
+Your OTP: {{ otp }}
+
+Need help? Ask at:
+Website: https://xten.com.np/
+Help Center: [Insert Help Center Link]
+
+Contact Information:
+Address: Pokhara 08
+Phone: +9779816164252
+
+Best regards,
+XTenIt Team
+Copyright © 2024 XTenIt. All rights reserved.
