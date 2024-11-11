@@ -1,5 +1,5 @@
 from django.db import models
-from ...apps.user.user import User
+from apps.user.models.user import User
 
 class Notification(models.Model):
     notification_id = models.AutoField(primary_key=True)

@@ -1,6 +1,6 @@
 from django.db import models
 from .job_listing import JobListing
-from .user.user import JobSeekerProfile
+from .user.models.user import JobSeekerProfile
 
 class JobApplication(models.Model):
     application_id = models.AutoField(primary_key=True)
