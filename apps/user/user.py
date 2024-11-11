@@ -1,5 +1,4 @@
 from django.db import models
-
 class User(models.Model):
     USER_TYPES = [
         ('JobSeeker', 'Job Seeker'),

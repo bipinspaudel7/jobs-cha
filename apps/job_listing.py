@@ -1,5 +1,5 @@
 from django.db import models
-from .user import EmployerProfile, JobSeekerProfile
+from .user.user import EmployerProfile
 
 class JobListing(models.Model):
     job_id = models.AutoField(primary_key=True)
@@ -13,10 +13,5 @@ class JobListing(models.Model):
     posted_date = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=50)
 
-class JobApplication(models.Model):
-    application_id = models.AutoField(primary_key=True)
-    job = models.ForeignKey(JobListing, on_delete=models.CASCADE)
-    job_seeker = models.ForeignKey(JobSeekerProfile, on_delete=models.CASCADE)
-    application_date = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=50)
-    resume_snapshot = models.CharField(max_length=255)
+    def __str__(self):
+        return self.title
